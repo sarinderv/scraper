@@ -25,7 +25,7 @@ public class JobController {
         Job newJob = new Job(jobRequest);
         int newJobId = jobService.add(newJob);
         logger.info("created new job {} with {} urls", newJobId, jobRequest.urls.length);
-        return Results.created(Json.toJson(newJob.id));
+        return Results.created(Json.toJson(new Job.JobId(newJob.id)));
     }
 
     public Result read(long jobId) {
