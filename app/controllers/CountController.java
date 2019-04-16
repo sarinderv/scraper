@@ -20,7 +20,7 @@ public class CountController extends Controller {
 
     @Inject
     public CountController(Counter counter) {
-       this.counter = counter;
+        this.counter = counter;
     }
 
     /**
